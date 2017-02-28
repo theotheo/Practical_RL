@@ -42,32 +42,32 @@ Taught on-campus in [HSE](https://cs.hse.ru) and [Yandex SDA](https://yandexdata
 
 
 # Syllabus
-* __week0__ Welcome to the MDP
- * Lecture: RL problems around us. Markov decision process. Simple solutions through combinatoric optimization.
- * Seminar: Frozenlake with genetic algorithms
-    * Homework description - [./week0/README.md](https://github.com/yandexdataschool/Practical_RL/blob/master/week0/README.md)
+* [x] __week0__ Welcome to the MDP
+ * [x] Lecture: RL problems around us. Markov decision process. Simple solutions through combinatoric optimization.
+ * [x] Seminar: Frozenlake with genetic algorithms
+    * [x] Homework description - [./week0/README.md](https://github.com/yandexdataschool/Practical_RL/blob/master/week0/README.md)
     * HSE Homework deadline: _23.59 1.02.17_
     * YSDA Homework deadline: _23.59 19.02.17_
-* __week1__ Monte-carlo methods
- * Lecture: Crossentropy method in general and for RL. Extension to continuous state & action space. Limitations.
- * Seminar: Tabular CEM for Taxi-v0, deep CEM for box2d environments.
+* [ ] __week1__ Monte-carlo methods
+ * [ ] Lecture: Crossentropy method in general and for RL. Extension to continuous state & action space. Limitations.
+ * [ ] Seminar: Tabular CEM for Taxi-v0, deep CEM for box2d environments.
     * HSE homework deadline: _23.59 15.02.17_
     * YSDA homework deadline: _23.59 26.02.17_
-* __week2__ Temporal Difference
- * Lecture: Discounted reward MDP. Value iteration. Q-learning. Temporal difference Vs Monte-Carlo.
- * Seminar: Tabular q-learning 
-    * Homework description - see [./week2/README.md](https://github.com/yandexdataschool/Practical_RL/blob/master/week2/README.md)
+* [ ] __week2__ Temporal Difference
+ * [ ] Lecture: Discounted reward MDP. Value iteration. Q-learning. Temporal difference Vs Monte-Carlo.
+ * [ ] Seminar: Tabular q-learning 
+    * [ ] Homework description - see [./week2/README.md](https://github.com/yandexdataschool/Practical_RL/blob/master/week2/README.md)
     * HSE homework deadline: _23.59 15.02.17_
-* __week3__ Value-based algorithms
- * Lecture: SARSA. Off-policy Vs on-policy algorithms. N-step algorithms. Eligibility traces.
- * Seminar: Qlearning Vs SARSA Vs expected value sarsa in the wild
-  * Homework [description](https://github.com/yandexdataschool/Practical_RL/blob/master/week3/README.md)
+* [ ] __week3__ Value-based algorithms
+ * [ ] Lecture: SARSA. Off-policy Vs on-policy algorithms. N-step algorithms. Eligibility traces.
+ * [ ] Seminar: Qlearning Vs SARSA Vs expected value sarsa in the wild
+  * [ ] Homework [description](https://github.com/yandexdataschool/Practical_RL/blob/master/week3/README.md)
     * HSE homework deadline _23.59 22.02.17_
 
-* __week3.5__ Deep learning recap
- * Lecture: deep learning, convolutional nets, batchnorm, dropout, data augmentation and all that stuff.
- * Seminar: Theano/Lasagne on mnist, simple deep q-learning with CartPole (TF version contrib is welcome)
-   * Homework - convnets on MNIST or simple deep q-learning
+* [ ] __week3.5__ Deep learning recap
+ * [ ] Lecture: deep learning, convolutional nets, batchnorm, dropout, data augmentation and all that stuff.
+ * [ ] Seminar: Theano/Lasagne on mnist, simple deep q-learning with CartPole (TF version contrib is welcome)
+   * [ ] Homework - convnets on MNIST or simple deep q-learning
     * HSE homework deadline _23.59 1.03.17_
 
 ## Future lectures:
