@@ -2,12 +2,17 @@
 # ------------------
 ## based on http://inst.eecs.berkeley.edu/~cs188/sp09/pacman.html
 
+import math
+import random
+from collections import defaultdict
+
+import numpy as np
+
+import util
+from featureExtractors import *
 from game import *
 from learningAgents import ReinforcementAgent
-from featureExtractors import *
 
-import random,util,math
-from collections import defaultdict
 
 class QLearningAgent(ReinforcementAgent):
   """
@@ -25,7 +30,7 @@ class QLearningAgent(ReinforcementAgent):
         which returns Q(state,action)
       - self.setQValue(state,action,value)
         which sets Q(state,action) := value
-    
+
     !!!Important!!!
     NOTE: please avoid using self._qValues directly to make code cleaner
   """
@@ -33,7 +38,7 @@ class QLearningAgent(ReinforcementAgent):
     "We initialize agent and Q-values here."
     ReinforcementAgent.__init__(self, **args)
     self._qValues = defaultdict(lambda:defaultdict(lambda:0))
-    
+
 
   def getQValue(self, state, action):
     """
@@ -54,39 +59,42 @@ class QLearningAgent(ReinforcementAgent):
       Returns max_action Q(state,action)
       where the max is over legal actions.
     """
-    
+
     possibleActions = self.getLegalActions(state)
     #If there are no legal actions, return 0.0
     if len(possibleActions) == 0:
     	return 0.0
 
     "*** YOUR CODE HERE ***"
-    raise NotImplementedError
+    # raise NotImplementedError
+    max_action = max([self.getQValue(state, action) for action in possibleActions])
 
-    return 0.
-    
+    return max_action
+
   def getPolicy(self, state):
     """
-      Compute the best action to take in a state. 
-      
+      Compute the best action to take in a state.
+
     """
     possibleActions = self.getLegalActions(state)
 
     #If there are no legal actions, return None
     if len(possibleActions) == 0:
     	return None
-    
+
     best_action = None
 
     "*** YOUR CODE HERE ***"
-    raise NotImplementedError
+    # raise NotImplementedError
+    # best_action = possibleActions.index(self.getValue(state))
+    best_action = max(possibleActions, key=lambda action: self.getQValue(state, action) )
 
     return best_action
 
   def getAction(self, state):
     """
-      Compute the action to take in the current state, including exploration.  
-      
+      Compute the action to take in the current state, including exploration.
+
       With probability self.epsilon, we should take a random action.
       otherwise - the best policy action (self.getPolicy).
 
@@ -94,11 +102,11 @@ class QLearningAgent(ReinforcementAgent):
       HINT: To pick randomly from a list, use random.choice(list)
 
     """
-    
+
     # Pick Action
     possibleActions = self.getLegalActions(state)
     action = None
-    
+
     #If there are no legal actions, return None
     if len(possibleActions) == 0:
     	return None
@@ -107,7 +115,12 @@ class QLearningAgent(ReinforcementAgent):
     epsilon = self.epsilon
 
     "*** YOUR CODE HERE ***"
-    raise NotImplementedError    
+    # raise NotImplementedError
+    if np.random.random() < epsilon:
+      action = np.random.choice(possibleActions)
+    else:
+      action = self.getPolicy(state)
+
 
     return action
 
@@ -123,14 +136,14 @@ class QLearningAgent(ReinforcementAgent):
     #agent parameters
     gamma = self.discount
     learning_rate = self.alpha
-    
-    "*** YOUR CODE HERE ***"
-    raise NotImplementedError
-    
-    reference_qvalue = PleaseImplementMe
-    updated_qvalue = PleaseImplementMe
 
-    self.setQValue(PleaseImplementMe,PleaseImplementMe,updated_qvalue)
+    "*** YOUR CODE HERE ***"
+    # raise NotImplementedError
+
+    reference_qvalue = reward + gamma*self.getValue(nextState)
+    updated_qvalue = learning_rate * reference_qvalue + (1 - learning_rate) * self.getQValue(state, action)
+
+    self.setQValue(state, action, updated_qvalue)
 
 
 #---------------------#end of your code#---------------------#
