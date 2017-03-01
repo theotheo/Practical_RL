@@ -53,7 +53,7 @@ Taught on-campus in [HSE](https://cs.hse.ru) and [Yandex SDA](https://yandexdata
     * HSE Homework deadline: _23.59 1.02.17_
     * YSDA Homework deadline: _23.59 19.02.17_
 * [ ] __week1__ Monte-carlo methods
- * [ ] Lecture: Crossentropy method in general and for RL. Extension to continuous state & action space. Limitations.
+ * [x] Lecture: Crossentropy method in general and for RL. Extension to continuous state & action space. Limitations.
  * [ ] Seminar: Tabular CEM for Taxi-v0, deep CEM for box2d environments.
     * HSE homework deadline: _23.59 15.02.17_
     * YSDA homework deadline: _23.59 26.02.17_
