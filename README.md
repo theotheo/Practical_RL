@@ -57,16 +57,16 @@ Taught on-campus in [HSE](https://cs.hse.ru) and [Yandex SDA](https://yandexdata
  * [ ] Seminar: Tabular CEM for Taxi-v0, deep CEM for box2d environments.
     * HSE homework deadline: _23.59 15.02.17_
     * YSDA homework deadline: _23.59 26.02.17_
-* [ ] __week2__ Temporal Difference
- * [ ] Lecture: Discounted reward MDP. Value iteration. Q-learning. Temporal difference Vs Monte-Carlo.
- * [ ] Seminar: Tabular q-learning
-    * [ ] Homework description - see [./week2/README.md](https://github.com/yandexdataschool/Practical_RL/blob/master/week2/README.md)
+* [x] __week2__ Temporal Difference
+ * [x] Lecture: Discounted reward MDP. Value iteration. Q-learning. Temporal difference Vs Monte-Carlo.
+ * [x] Seminar: Tabular q-learning
+    * [+] Homework description - see [./week2/README.md](https://github.com/yandexdataschool/Practical_RL/blob/master/week2/README.md)
     * HSE homework deadline: _23.59 15.02.17_
 
-* [ ] __week3__ Value-based algorithms
- * [ ] Lecture: SARSA. Off-policy Vs on-policy algorithms. N-step algorithms. Eligibility traces.
- * [ ] Seminar: Qlearning Vs SARSA Vs expected value sarsa in the wild
-  * [ ] Homework [description](https://github.com/yandexdataschool/Practical_RL/blob/master/week3/README.md)
+* [x] __week3__ Value-based algorithms
+ * [x] Lecture: SARSA. Off-policy Vs on-policy algorithms. N-step algorithms. Eligibility traces.
+ * [x] Seminar: Qlearning Vs SARSA Vs expected value sarsa in the wild
+  * [+] Homework [description](https://github.com/yandexdataschool/Practical_RL/blob/master/week3/README.md)
     * HSE homework deadline _23.59 22.02.17_
 
 * [ ] __week3.5__ Deep learning recap
